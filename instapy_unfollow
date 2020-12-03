@@ -1,0 +1,9 @@
+from instapy import InstaPy 
+
+
+session = InstaPy(username="INSERT YOUR USERNAME", password="INSERT YOUR PASSWORD", headless_browser=True)
+session.login()
+
+session.unfollow_users(amount=333, allFollowing=True, sleep_delay=55)
+
+session.end()
