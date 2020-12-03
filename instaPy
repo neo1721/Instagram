@@ -1,0 +1,16 @@
+from instapy import InstaPy 
+
+
+session = InstaPy(username="INSERT YOUR USERNAME", password="INSERT YOUR PASSWORD", headless_browser=True)
+session.login()
+
+
+# max_followers --> number of followers the user have
+session.set_relationship_bounds(enabled = True, max_followers = 200) 
+
+#session.set_do_follow(True, percentage = 100)
+
+session.like_by_tags(["INSERT WhAT HASHTAGS YOU WANT TO LIKE"], amount = 3) 
+
+
+session.end()
